@@ -2,6 +2,8 @@
 title: "Collection:ArrayList源码/扩容机制"
 date: 2020-06-17T14:53:38+08:00
 draft: false
+tags: ["collection","java"]
+
 ---
 
 ## ArrayList继承体系

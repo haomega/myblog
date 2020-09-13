@@ -1,4 +1,51 @@
 baseURL = "https://haomega.github.io/myblog/"
-languageCode = "en-us"
+languageCode = "zh-hans"
 title = "小豪小豪"
-theme = "ananke"
+theme = "hugo-PaperMod"
+
+layout = "archives"
+url = "/archives"
+summary = "archives"
+
+
+
+[params]
+  description = "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  author = "小豪"
+  ShowReadingTime = true
+  SetThemeAuto = true
+  contentTypeName = "posts"
+  defaultTheme = "auto"
+  ShowShareButtons = false
+
+  [params.profileMode]
+  enabled = true
+  title = "小豪"
+  imageUrl = "https://avatars2.githubusercontent.com/u/22785340?s=460&u=768b79b2ee648625819f815ebad0a74066a7f812&v=4"
+  imageTitle = "hao"
+
+  [[params.profileMode.buttons]]
+  name = "Archives"
+  url = "archives"
+
+  [[params.profileMode.buttons]]
+  name = "Tags"
+  url = "tags"
+
+  [params.homeInfoParams]
+    Title = "Hi there 👋"
+    Content = "Welcome to my blog"
+
+
+[menu]
+
+  [[menu.main]]
+    name = "Archives"
+    url = "archives/"
+    weight = 5
+
+  [[menu.main]]
+    name = "Tags"
+    url = "tags/"
+    weight = 10
+
