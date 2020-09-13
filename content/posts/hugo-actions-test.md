@@ -1,7 +1,7 @@
 ---
 title: "Hugo Actions Test"
 date: 2020-09-13T15:22:04+08:00
-draft: true
+draft: false
 ---
 
 # Hello word
