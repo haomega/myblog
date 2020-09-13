@@ -1,0 +1,21 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>collection - 小豪小豪</title><meta name=description content="collection"><meta name=author content="小豪"><link href=https://haomega.github.io/myblog/css/stylesheet.min.c5f3513f5b80c2549e72d959bdae43941f36c204c7504248d1e05f5fa480f14a.css integrity="sha256-xfNRP1uAwlSectlZva5DlB82wgTHUEJI0eBfX6SA8Uo=" rel="preload stylesheet" as=style><link rel=apple-touch-icon href=https://haomega.github.io/myblog/apple-touch-icon.png><link rel=icon href=https://haomega.github.io/myblog/favicon.ico><meta name=generator content="Hugo 0.74.3"><link rel=alternate type=application/rss+xml href=https://haomega.github.io/myblog/tags/collection/index.xml title=小豪小豪></head><body class=list id=top><header class=header><nav class=nav><p class=logo><a href=https://haomega.github.io/myblog/>小豪小豪</a></p><ul class=menu id=menu onscroll=menu_on_scroll()><li><a href=https://haomega.github.io/myblog/archives/>Archives</a></li><li><a href=https://haomega.github.io/myblog/tags/>Tags</a></li></ul></nav></header><main class=main><header class=page-header><h1>collection</h1></header><article class=post-entry><header class=entry-header><h2>Collection:ArrayList源码/扩容机制</h2></header><section class=entry-content><p>ArrayList继承体系 implements List&lt;E>, RandomAccess, Cloneable, java.io.Serializable 你会发现既然ArrayList继承了AbstractList（它implement List接口），为啥后面还加了个implement List&lt;E>，网上给出的解释是：
+implement List&lt;E> 是可以省略的，只是为了直观显示ArrayList实现了List接口，因为AbstractList只是为了减少实现List接口的代码。
+RandomAccess、Cloneable、Serializable，可随机读写、可克隆、可序列化。
+Field private static final int DEFAULT_CAPACITY = 10默认容量10
+private static final Object[] EMPTY_ELEMENTDATA = {} 共享的空数组
+private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {} 共享的空数组
+transient Object[] elementData ArrayList元素存放的数据结构-数组
+你会注意到EMPTY_ELEMENTDATA和DEFAULTCAPACITY_EMPTY_ELEMENTDATA只是两个名字不通的空数组，为啥会需要两个呢？
+观察构造器public ArrayList(int initialCapacity)指定容量为0的话，ArrayList会使用EMPTY_ELEMENTDATA，
+而无参构造器则会使用DEFAULTCAPACITY_EMPTY_ELEMENTDATA
+这两个有什么不通呢？答案是容量增长方式不一样
+private static int calculateCapacity(Object[] elementData, int minCapacity) { if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) { return Math.max(DEFAULT_CAPACITY, minCapacity); } return minCapacity; } 可以看到第二个默认容量是10，而第一个是0，表现为：...</p></section><footer class=entry-footer><time>June 17, 2020</time>
+.
+1min read
+. 小豪</footer><a class=entry-link aria-label="post link to Collection:ArrayList源码/扩容机制" href=https://haomega.github.io/myblog/posts/collection-arraylist-%E6%BA%90%E7%A0%81-%E6%89%A9%E5%AE%B9%E6%9C%BA%E5%88%B6/></a></article></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
+<span>&#183;</span>
+<span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</span>
+<span>&#183;</span>
+<span>Theme️ <a href=https://github.com/adityatelange/hugo-PaperMod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top"><button class=top-link id=top-link type=button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script src=https://haomega.github.io/myblog/js/highlight.min.min.be617795b40f52d6ca2248c7fbf433c49211c7acfe8f221ac54f6b0007c66ea1.js integrity="sha256-vmF3lbQPUtbKIkjH+/QzxJIRx6z+jyIaxU9rAAfGbqE="></script><script>window.onload=function(){if(localStorage.getItem("menu-scroll-position")){document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position");}}
+hljs.initHighlightingOnLoad();document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener("click",function(e){e.preventDefault();document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});});});var mybutton=document.getElementById("top-link");window.onscroll=function(){if(document.body.scrollTop>800||document.documentElement.scrollTop>800){mybutton.style.visibility="visible";mybutton.style.opacity="1";}else{mybutton.style.visibility="hidden";mybutton.style.opacity="0";}};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft);}</script></body></html>
