@@ -2,6 +2,7 @@
 title: "HashMap 容量为什么是2的幂"
 date: 2020-07-11T16:00:33+08:00
 draft: false
+tags: ["collection","map"]
 ---
 
 ## HashMap桶的容量

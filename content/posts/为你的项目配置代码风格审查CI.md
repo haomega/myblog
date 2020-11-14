@@ -2,6 +2,7 @@
 title: "为你的项目配置代码风格审查CheckStyle与CI测试"
 date: 2020-08-03T22:02:15+08:00
 draft: false
+tags: ["CI"]
 ---
 
 ## why？

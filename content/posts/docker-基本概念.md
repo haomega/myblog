@@ -2,6 +2,7 @@
 title: "Docker 基本概念"
 date: 2020-07-27T19:06:43+08:00
 draft: true
+tags: ["docker"]
 ---
 
 ## 为什么Docker是软件交付的革命

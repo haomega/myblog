@@ -2,6 +2,7 @@
 title: "Lambda 函数式编程"
 date: 2020-07-03T15:32:15+08:00
 draft: false
+tags: ["lambda"]
 ---
 
 ## 函数
