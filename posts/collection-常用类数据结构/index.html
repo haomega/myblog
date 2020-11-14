@@ -21,7 +21,7 @@ HashSet(int initialCapacity, float loadFactor, boolean dummy) {
         }
     }
 </code></pre><p>TreeMap是红黑树的实现，具体可看<a href=https://juejin.im/post/5be529a5f265da615704fd45>这里</a>
-‭</p><h2 id=总结>总结:</h2><p>Set的实现基本靠内部维护的HashMap类；</p><p>List有数组和链表实现，数组可以根据下标快速获取元素，删除慢；链表删除快，随机读写会比较慢，因为每次获取元素都要从第一个元素开始找。</p><p>HashMap的实现比较复杂，数据结构是数组加链表，虽然有链表实现，但是数据结构也是相同的，只不过桶的数据结构变成了具有双向链表的结构，也由于根据计算hash来确定元素存放位置，使得查找非常快。</p></div><footer class=post-footer></footer></article></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
+‭</p><h2 id=总结>总结:</h2><p>Set的实现基本靠内部维护的HashMap类；</p><p>List有数组和链表实现，数组可以根据下标快速获取元素，删除慢；链表删除快，随机读写会比较慢，因为每次获取元素都要从第一个元素开始找。</p><p>HashMap的实现比较复杂，数据结构是数组加链表，虽然有链表实现，但是数据结构也是相同的，只不过桶的数据结构变成了具有双向链表的结构，也由于根据计算hash来确定元素存放位置，使得查找非常快。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://haomega.github.io/myblog/tags/collection>collection</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</span>
 <span>&#183;</span>

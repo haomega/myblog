@@ -14,7 +14,7 @@ Usage 以Comsumer为例，该函数式接口 void accept(T t)，当参数为Coms
 这对于一些简单的方法来说，调用一个接口还必须要传入一个对象，显得有些沉重。</p><p>比如一个方法接受一个接口为参数，如果你想传入的接口有不同的方法体，可能随时变化，
 不使用lambda的话，每一种变体，你都要生成一个类实现该接口，然后把他当作参数传入。</p><p>这非常不灵活，如果使用lambda的话，方法可以接受一个函数作为参数，也就是说我们可以传入一个方法体进去，这样会非常灵活。</p><p>Lambda和函数式接口减少了很多不必要的代码，让我们的代码更优雅，至少看起来是的。</p><h2 id=usage>Usage</h2><p>以Comsumer为例，该函数式接口 <code>void accept(T t)</code>，当参数为Comsumer时，我们可以传入<code>(t)->System.out.println(t)</code>
 ，这与我们实现这个接口，并传入相比，没有什么区别。</p><h2 id=总结>总结</h2><p>函数接口就是只包含一个抽象方法的接口，与普通接口并没有什么区别。</p><p>函数接口相当于定义了一个函数y=f(x)，它接受0个或多个参数经过f(x)变换返回了y。
-Lambda表达式让我们以简便的方式定义一个函数的执行细节。</p></div><footer class=post-footer></footer></article></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
+Lambda表达式让我们以简便的方式定义一个函数的执行细节。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://haomega.github.io/myblog/tags/lambda>lambda</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</span>
 <span>&#183;</span>

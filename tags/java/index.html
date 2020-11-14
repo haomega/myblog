@@ -12,7 +12,17 @@ transient Object[] elementData ArrayList元素存放的数据结构-数组
 private static int calculateCapacity(Object[] elementData, int minCapacity) { if (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) { return Math.max(DEFAULT_CAPACITY, minCapacity); } return minCapacity; } 可以看到第二个默认容量是10，而第一个是0，表现为：...</p></section><footer class=entry-footer><time>June 17, 2020</time>
 .
 1min read
-. 小豪</footer><a class=entry-link aria-label="post link to Collection:ArrayList源码/扩容机制" href=https://haomega.github.io/myblog/posts/collection-arraylist-%E6%BA%90%E7%A0%81-%E6%89%A9%E5%AE%B9%E6%9C%BA%E5%88%B6/></a></article></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
+. 小豪</footer><a class=entry-link aria-label="post link to Collection:ArrayList源码/扩容机制" href=https://haomega.github.io/myblog/posts/collection-arraylist-%E6%BA%90%E7%A0%81-%E6%89%A9%E5%AE%B9%E6%9C%BA%E5%88%B6/></a></article><article class=post-entry><header class=entry-header><h2>Exception 体系概要</h2></header><section class=entry-content><p>概要 程序并不是每次都能按照理想情况运行，总是有着不可预测的异常情况发生。
+作用 正确处理异常可以使程序更健壮； 异常给方法提供了除了return之外的额外的返回途径； Java中的异常结构 Java中的异常大致分为两类：Exception和Error，他们都继承自Throwable，意思是可抛出的异常;
+Exception:(checked) 往往可以通过正确处理来避免；例如NullPointorException * runtimeException：运行时异常（unchecked） Error：（unchecked） 程序无能为力的异常；例如NoSuchClassError、OutOfmemoryError
+异常的处理 有两种方式来处理异常
+抛出 捕获 当你的的程序在某些情况不能正确执行：你可以抛出一个异常来警告调用者，或者捕获异常并处理。 当你的程序调用一个抛出异常的接口时： * 继续抛出这个异常 * 捕获并处理它（切记不可捕获了异常时不做任何处理） * 捕获它，doSomething并继续抛出此异常或另一个异常
+异常处理原则 能用if/else或者其他能处理的，不要用异常 尽早抛出异常 带出重要信息 一旦捕获异常除非特别的，必须进行处理或者重新抛出。 ···· 其他 不捕获，一直抛出会发生什么？ 异常会击穿方法，直到被捕获，如果一直到最外层都没有捕获，则会杀掉当前线程。
+catch/finally里的return finally一定会被执行，所以最终return的是finally块里的，另：不要再catch里return，这是不好的做法。
+日志里的caused by是什么？ 出现caused by是异常被捕获后，重新由新的异常包裹（throw new XXXException(“some things”, e)）并抛出。...</p></section><footer class=entry-footer><time>May 28, 2020</time>
+.
+1min read
+. 小豪</footer><a class=entry-link aria-label="post link to Exception 体系概要" href=https://haomega.github.io/myblog/posts/exception-%E6%A6%82%E8%BF%B0/></a></article></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</span>
 <span>&#183;</span>

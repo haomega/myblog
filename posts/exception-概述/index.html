@@ -12,7 +12,7 @@ Error：（unchecked） 程序无能为力的异常；例如NoSuchClassError、O
 * 继续抛出这个异常
 * 捕获并处理它（切记不可捕获了异常时不做任何处理）
 * 捕获它，doSomething并继续抛出此异常或另一个异常</p><h2 id=异常处理原则>异常处理原则</h2><ul><li>能用if/else或者其他能处理的，不要用异常</li><li>尽早抛出异常</li><li>带出重要信息</li><li>一旦捕获异常除非特别的，必须进行处理或者重新抛出。
-····</li></ul><h1 id=其他>其他</h1><h3 id=不捕获一直抛出会发生什么>不捕获，一直抛出会发生什么？</h3><p>异常会击穿方法，直到被捕获，如果一直到最外层都没有捕获，则会杀掉当前线程。</p><h3 id=catchfinally里的return>catch/finally里的return</h3><p>finally一定会被执行，所以最终return的是finally块里的，另：不要再catch里return，这是不好的做法。</p><h3 id=日志里的caused-by是什么>日志里的caused by是什么？</h3><p>出现caused by是异常被捕获后，重新由新的异常包裹（throw new XXXException(&ldquo;some things&rdquo;, e)）并抛出。</p></div><footer class=post-footer></footer></article></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
+····</li></ul><h1 id=其他>其他</h1><h3 id=不捕获一直抛出会发生什么>不捕获，一直抛出会发生什么？</h3><p>异常会击穿方法，直到被捕获，如果一直到最外层都没有捕获，则会杀掉当前线程。</p><h3 id=catchfinally里的return>catch/finally里的return</h3><p>finally一定会被执行，所以最终return的是finally块里的，另：不要再catch里return，这是不好的做法。</p><h3 id=日志里的caused-by是什么>日志里的caused by是什么？</h3><p>出现caused by是异常被捕获后，重新由新的异常包裹（throw new XXXException(&ldquo;some things&rdquo;, e)）并抛出。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://haomega.github.io/myblog/tags/exception>exception</a></li><li><a href=https://haomega.github.io/myblog/tags/java>java</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</span>
 <span>&#183;</span>

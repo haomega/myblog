@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>html on 小豪小豪</title><link>https://haomega.github.io/myblog/tags/html/</link><description>Recent content in html on 小豪小豪</description><generator>Hugo -- gohugo.io</generator><language>zh-hans</language><lastBuildDate>Thu, 09 Jul 2020 21:41:46 +0800</lastBuildDate><atom:link href="https://haomega.github.io/myblog/tags/html/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML 起手与常用标签</title><link>https://haomega.github.io/myblog/posts/html-%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link><pubDate>Thu, 09 Jul 2020 21:41:46 +0800</pubDate><guid>https://haomega.github.io/myblog/posts/html-%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid><description>概念 WWW：Word Wide Web 万维网，包含URL、HTTP和HTML。
+W3C：万维网联盟，主要负责万维网协议的制定。
+HTTP=Hyper Text Transfer Protocol 超文本传输协议。
+HTML=Hyper Text Markup Lanauage 超文本标记语言。
+万维网于1900年由李爵士发明，
+常用标签 a Tag 超链接标签，通过&amp;lt;a&amp;gt;标签，网页互相连接，组成了丰富多彩的网络内容形式。
+属性 href 网址：
+https://google.com http://google.com //google.com 根据网页协议自动选择协议 路径：
+/a/b或a/b index.html或/index.html 伪协议： javascript:代码;可以执行Javascript代码，通常用于javascript:;不起任何作用。 mailto:邮箱或tel:手机号 id
+href=#id 跳转页面的指定id位置
+target href中的连接打开位置，比如常用的_blank在新窗口打开。
+浏览器内置（window）
+_blank _top _parent _sef 默认选项，本窗口 用户自定义：
+window name iframe name img Tag 图片标签，img标签会发起HTTP GET请求来加载图片资源。
+属性 alt height/width src 事件 onload onerror 图片加载失败是，可以通过这个事件设置一个替换图片。 table Tag 完整的table示例：</description></item></channel></rss>

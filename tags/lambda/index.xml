@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lambda on 小豪小豪</title><link>https://haomega.github.io/myblog/tags/lambda/</link><description>Recent content in lambda on 小豪小豪</description><generator>Hugo -- gohugo.io</generator><language>zh-hans</language><lastBuildDate>Fri, 03 Jul 2020 15:32:15 +0800</lastBuildDate><atom:link href="https://haomega.github.io/myblog/tags/lambda/index.xml" rel="self" type="application/rss+xml"/><item><title>Lambda 函数式编程</title><link>https://haomega.github.io/myblog/posts/lambda-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</link><pubDate>Fri, 03 Jul 2020 15:32:15 +0800</pubDate><guid>https://haomega.github.io/myblog/posts/lambda-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/</guid><description>函数 y=f(x) 我们称这是一个函数，x经过一系列转换变成了y
+这与我们的接口很像public int compareTo(T o)，T类型参数o，经过comareTo接口调用，返回了一个int值。
+在调用compareTo接口时，可以说我们调用了一个函数，它接受一个值o，返回一个int。
+函数接口@FunctionalInterface Java自1.8之后引入了函数式接口，java.util.function包下Java为我们准备了一些定义好的常用函数式接口。
+函数式接口的定义是：一个只包含一个抽象方法的接口类。
+当一个方法参数为函数式接口时，我们可以快速的传入一个lambda表达式当作参数传入。
+为什么引入 Java是一个面向对象的语言，想要调用一个方法，就必须要传入一个对象。 这对于一些简单的方法来说，调用一个接口还必须要传入一个对象，显得有些沉重。
+比如一个方法接受一个接口为参数，如果你想传入的接口有不同的方法体，可能随时变化， 不使用lambda的话，每一种变体，你都要生成一个类实现该接口，然后把他当作参数传入。
+这非常不灵活，如果使用lambda的话，方法可以接受一个函数作为参数，也就是说我们可以传入一个方法体进去，这样会非常灵活。
+Lambda和函数式接口减少了很多不必要的代码，让我们的代码更优雅，至少看起来是的。
+Usage 以Comsumer为例，该函数式接口 void accept(T t)，当参数为Comsumer时，我们可以传入(t)-&amp;gt;System.out.println(t) ，这与我们实现这个接口，并传入相比，没有什么区别。
+总结 函数接口就是只包含一个抽象方法的接口，与普通接口并没有什么区别。
+函数接口相当于定义了一个函数y=f(x)，它接受0个或多个参数经过f(x)变换返回了y。 Lambda表达式让我们以简便的方式定义一个函数的执行细节。</description></item></channel></rss>
