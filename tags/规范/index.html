@@ -1,11 +1,12 @@
 <!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>规范 - 小豪小豪</title><meta name=description content="规范"><meta name=author content="小豪"><link href=https://haomega.github.io/myblog/css/stylesheet.min.c5f3513f5b80c2549e72d959bdae43941f36c204c7504248d1e05f5fa480f14a.css integrity="sha256-xfNRP1uAwlSectlZva5DlB82wgTHUEJI0eBfX6SA8Uo=" rel="preload stylesheet" as=style><link rel=apple-touch-icon href=https://haomega.github.io/myblog/apple-touch-icon.png><link rel=icon href=https://haomega.github.io/myblog/favicon.ico><meta name=generator content="Hugo 0.74.3"><link rel=alternate type=application/rss+xml href=https://haomega.github.io/myblog/tags/%E8%A7%84%E8%8C%83/index.xml title=小豪小豪></head><body class=list id=top><header class=header><nav class=nav><p class=logo><a href=https://haomega.github.io/myblog/>小豪小豪</a></p><ul class=menu id=menu onscroll=menu_on_scroll()><li><a href=https://haomega.github.io/myblog/archives/>Archives</a></li><li><a href=https://haomega.github.io/myblog/tags/>Tags</a></li></ul></nav></header><main class=main><header class=page-header><h1>规范</h1></header><article class=post-entry><header class=entry-header><h2>UML</h2></header><section class=entry-content><p>11月第三周：UML UML 统一建模语言。 我知道UML是什么东西，但是从未认真学习过，因为没有对这方面有过要求，工作中我也发现很多人对UML并不是特别了解。《面向对象编程》专门有一个章节对UML做了介绍，对于我来说觉得比较繁琐，我也了解到UML能做很多事情，但在我的日常工作中，UML主要作为模块初期构建时的一个建模工具，帮助我理清思路，设计代码结构，这次也主要作为这方面的内容写一个BLOG做记录。
 UML是什么 UML（Unified Modeling Language）统一建模语言，专门用来为面向对象开发系统产品进行说明、可视化和编制文档的一种标准语言，UML只是一个标准，你可以使用任何工具来制作一个遵循UML标准的类图、包图、流程图等等。 ** UML 2.5标准文档：https://www.omg.org/spec/UML/2.5.1/PDF 标准文档有将近800页，UML发展到现在已经相当复杂了，如果你是把它当作一个工具的话，不建议全部阅读，最重要的是明白如何使用UML来以一个统一的标准的形式来描述你所做的事。
-图的形式更加直观有利于理解，更注重整体，文档作为补充，更注意细节。 在UML统一标准下，更能精确表达设计思想，团队沟通中也不容易产生歧义。 重点去理解UML如何体现需求，总体设计，业务逻辑设计，验证和测试，具体实现等等不同角度的异同，协调和平衡软件系统里不同的考虑 核心思想 包图 在进行面向对象分析和设计时，需要组织开发过程的工件，从而清晰地展现出问题域的分析和相关的设计。具体的原因会有不同，但主要集中在可视模型本身的物理结构上，或希望通过多重视图，清晰地展现模型元素。
-中心思想：描述组织模块结构，清晰的展示**架构层次、可见性、依赖关系；**试图通过展现不同的视角下的模型元素。 经典例子
-元素 可见性： “+”共有，对外可见，通常为包提供的接口 “-”私有，对外不可见
-依赖关系： 使用虚线的开放箭头表示：———-> 只想依赖的提供者，关系类型包括：跟踪、派生、细化、允许、使用 技巧和注意事项：
-包图用文件夹表示，可以给包起一个名字，表示其用途 虚线箭头：引用，实线空心箭头：包含 类图 在系统的逻辑视图中，类图用于表示类和它们之间的关系。单张类图表示了系统类结构的一个视图。在分析时，我们利用类图来说明实体共同的角色和职责，这些实体提供了系统的行为。在设计时，我们利用类图来记录类的结构，这些类构成了系统的架构。  中心思想： 表示类的行为和他们之间的关系，通常使用类图来表示你的**架构设计，**是非常重要的图。 例子： 技巧和注意事项：
-类图中，包含两个基本元素：类与他们的关系 类的构成：类的构成属性元素、类的行为、类与其他类的关系（关联、泛化、聚合、组合） 类与另一个类多对应的关系表示：0—1，1—n 等等。 流程图 时序图 时间图是一种交互图，其目的是展示元素状态随时间的变化，以及事件如何改变这些状态。
+图的形式更加直观有利于理解，更注重整体，文档作为补充，更注意细节。 在UML统一标准下，更能精确表达设计思想，团队沟通中也不容易产生歧义。 重点去理解UML如何体现需求，总体设计，业务逻辑设计，验证和测试，具体实现等等不同角度的异同，协调和平衡软件系 统里不同的考虑 核心思想 包图 在进行面向对象分析和设计时，需要组织开发过程的工件，从而清晰地展现出问题域的分析和相关的设计。具体的原因会有不同，但主要集中在可视模型本身的物理结构上，或希望通过多重视图，清晰地展现模型元素。
+中心思想 描述**组织模块**结构，清晰的展示**架构层次、可见性、依赖关系；**试图通过展现不同的视角下的模型元素。 经典例子
+元素 可见性： “+”共有，对外可见，通常为包提供的接口
+“-”私有，对外不可见
+依赖关系： 使用虚线的开放箭头表示：———-> 只想依赖的提供者，关系类型包括：跟踪、派生、细化、允许、使用
+技巧和注意事项： 包图用文件夹表示，可以给包起一个名字，表示其用途 虚线箭头：引用，实线空心箭头：包含 类图 在系统的逻辑视图中，类图用于表示类和它们之间的关系。单张类图表示了系统类结构的一个视图。在分析时，我们利用类图来说明实体共同的角色和职责，这些实体提供了系统的行为。在设计时，我们利用类图来记录类的结构，这些类构成了系统的架构。  中心思想 表示类的行为和他们之间的关系，通常使用类图来表示你的**架构设计，**是非常重要的图。
+例子 技巧和注意事项 类图中，包含两个基本元素：类与他们的关系 类的构成：类的构成属性元素、类的行为、类与其他类的关系（关联、泛化、聚合、组合） 类与另一个类多对应的关系表示：0—1，1—n 等等。 流程图 时序图 时间图是一种交互图，其目的是展示元素状态随时间的变化，以及事件如何改变这些状态。
 状态图 状态机图被用来设计和理解时间关键的系统，在这种系统中，时间不正确的后果是严重的。
 用例图 通过用例图展示待建系统的上下文范围以及它提供的功能。它们描述了谁（或什么）与系统交互，外部世界希望系统做些什么。
 ...</p></section><footer class=entry-footer><time>January 12, 2021</time>
