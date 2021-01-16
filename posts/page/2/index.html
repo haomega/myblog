@@ -1,4 +1,19 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Posts - 小豪小豪</title><meta name=description content="Posts"><meta name=author content="小豪"><link href=https://haomega.github.io/myblog/css/stylesheet.min.c5f3513f5b80c2549e72d959bdae43941f36c204c7504248d1e05f5fa480f14a.css integrity="sha256-xfNRP1uAwlSectlZva5DlB82wgTHUEJI0eBfX6SA8Uo=" rel="preload stylesheet" as=style><link rel=apple-touch-icon href=https://haomega.github.io/myblog/apple-touch-icon.png><link rel=icon href=https://haomega.github.io/myblog/favicon.ico><meta name=generator content="Hugo 0.74.3"><link rel=alternate type=application/rss+xml href=https://haomega.github.io/myblog/posts/index.xml title=小豪小豪></head><body class=list id=top><header class=header><nav class=nav><p class=logo><a href=https://haomega.github.io/myblog/>小豪小豪</a></p><ul class=menu id=menu onscroll=menu_on_scroll()><li><a href=https://haomega.github.io/myblog/archives/>Archives</a></li><li><a href=https://haomega.github.io/myblog/tags/>Tags</a></li></ul></nav></header><main class=main><header class=page-header><h1>Posts</h1></header><article class=post-entry><header class=entry-header><h2>Java 泛型简介</h2></header><section class=entry-content><p>Java泛型历史 Java是从Jdk1.7之后引入泛型的，现在我们已经习惯声明一个类型绑定的Collection类new ArrayList&lt;String>();
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Posts - 小豪小豪</title><meta name=description content="Posts"><meta name=author content="小豪"><link href=https://haomega.github.io/myblog/css/stylesheet.min.c5f3513f5b80c2549e72d959bdae43941f36c204c7504248d1e05f5fa480f14a.css integrity="sha256-xfNRP1uAwlSectlZva5DlB82wgTHUEJI0eBfX6SA8Uo=" rel="preload stylesheet" as=style><link rel=apple-touch-icon href=https://haomega.github.io/myblog/apple-touch-icon.png><link rel=icon href=https://haomega.github.io/myblog/favicon.ico><meta name=generator content="Hugo 0.74.3"><link rel=alternate type=application/rss+xml href=https://haomega.github.io/myblog/posts/index.xml title=小豪小豪></head><body class=list id=top><header class=header><nav class=nav><p class=logo><a href=https://haomega.github.io/myblog/>小豪小豪</a></p><ul class=menu id=menu onscroll=menu_on_scroll()><li><a href=https://haomega.github.io/myblog/archives/>Archives</a></li><li><a href=https://haomega.github.io/myblog/tags/>Tags</a></li></ul></nav></header><main class=main><header class=page-header><h1>Posts</h1></header><article class=post-entry><header class=entry-header><h2>Lambda 函数式编程</h2></header><section class=entry-content><p>函数 y=f(x) 我们称这是一个函数，x经过一系列转换变成了y
+这与我们的接口很像public int compareTo(T o)，T类型参数o，经过comareTo接口调用，返回了一个int值。
+在调用compareTo接口时，可以说我们调用了一个函数，它接受一个值o，返回一个int。
+函数接口@FunctionalInterface Java自1.8之后引入了函数式接口，java.util.function包下Java为我们准备了一些定义好的常用函数式接口。
+函数式接口的定义是：一个只包含一个抽象方法的接口类。
+当一个方法参数为函数式接口时，我们可以快速的传入一个lambda表达式当作参数传入。
+为什么引入 Java是一个面向对象的语言，想要调用一个方法，就必须要传入一个对象。 这对于一些简单的方法来说，调用一个接口还必须要传入一个对象，显得有些沉重。
+比如一个方法接受一个接口为参数，如果你想传入的接口有不同的方法体，可能随时变化， 不使用lambda的话，每一种变体，你都要生成一个类实现该接口，然后把他当作参数传入。
+这非常不灵活，如果使用lambda的话，方法可以接受一个函数作为参数，也就是说我们可以传入一个方法体进去，这样会非常灵活。
+Lambda和函数式接口减少了很多不必要的代码，让我们的代码更优雅，至少看起来是的。
+Usage 以Comsumer为例，该函数式接口 void accept(T t)，当参数为Comsumer时，我们可以传入(t)->System.out.println(t) ，这与我们实现这个接口，并传入相比，没有什么区别。
+总结 函数接口就是只包含一个抽象方法的接口，与普通接口并没有什么区别。
+函数接口相当于定义了一个函数y=f(x)，它接受0个或多个参数经过f(x)变换返回了y。 Lambda表达式让我们以简便的方式定义一个函数的执行细节。...</p></section><footer class=entry-footer><time>July 3, 2020</time>
+.
+1min read
+. 小豪</footer><a class=entry-link aria-label="post link to Lambda 函数式编程" href=https://haomega.github.io/myblog/posts/lambda-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/></a></article><article class=post-entry><header class=entry-header><h2>Java 泛型简介</h2></header><section class=entry-content><p>Java泛型历史 Java是从Jdk1.7之后引入泛型的，现在我们已经习惯声明一个类型绑定的Collection类new ArrayList&lt;String>();
 Collection体系是从JDK1.2引入的@since 1.2
 也就是说在JDK1.2之后JDK1.7之前，只能使用原始类型的Collectionnew ArrayList(),原始类型接受任何类型的元素也就是Object。
 为什么要引入泛型 为了类型安全 我们使用数组的时候：new String[1]，非String类型是不能放入String数组的，在编译阶段就会报错。
@@ -79,7 +94,7 @@ Maven做了什么？ 在管理依赖的方面，Maven就是从它的仓库中通
 包冲突 根据Jvm执行的机制可以知道，包冲突就是在classpath中存在全限定类名相同的类，我们想要使用的jar包的path排在了不想要的后面，导致了错误的引用。 解决方法也是围绕着能够让Jvm能够正确读取我们想要的类为前提来进行。...</p></section><footer class=entry-footer><time>May 11, 2020</time>
 .
 1min read
-. 小豪</footer><a class=entry-link aria-label="post link to Java的包管理与Maven" href=https://haomega.github.io/myblog/posts/%E5%8C%85%E7%AE%A1%E7%90%86-maven/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=/myblog/posts/>« Prev Page</a></nav></footer></main><footer class=footer><span>&copy; 2020 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
+. 小豪</footer><a class=entry-link aria-label="post link to Java的包管理与Maven" href=https://haomega.github.io/myblog/posts/%E5%8C%85%E7%AE%A1%E7%90%86-maven/></a></article><footer class=page-footer><nav class=pagination><a class=prev href=/myblog/posts/>« Prev Page</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://haomega.github.io/myblog/>小豪小豪</a></span>
 <span>&#183;</span>
 <span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</span>
 <span>&#183;</span>
